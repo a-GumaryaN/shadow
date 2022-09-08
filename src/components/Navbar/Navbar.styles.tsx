@@ -1,58 +1,80 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import style from "styled-components";
-
-export const Nav = style.nav`
-width:100%;
-display:flex;
-justify-content:space-between;
-padding:10px 80px;
-align-items:center;
-position:fixed;
-background-color:white;
+export const Header = styled.header`
+  width: 100%;
+  position: sticky;
+  padding: 14px 120px;
+  background-color: white;
+  @media only screen and (max-width: 992px) {
+    padding: 14px 30px;
+  }
 `;
 
-export const NavMenu = style.ul`
-display:flex;
-justify-content:space-around;
-
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 `;
 
-export const NavItem = style.li`
-margin: 0 10px;
-
-& a{
-    color:#333;
-    text-transform:uppercase;
-    font-size:13px;
-}
-
-&:hover& a {
-    color:#858585
-}
-
-@media only screen and (max-width:768px){
-    display:none;
-}
-
-`;
-
-export const SocialMedias = style.ul`
-display:flex;
-`;
-
-export const SocialMedia = styled(Link)`
-margin: 0 10px;
-@media only screen and (max-width:768px){
-    display:none;
-}
-`;
-
-
-export const Logo=styled(Link)`
-width:120px;
-
-& img{
+export const Logo = styled(Link)`
+  width: 140px;
+  & > img {
     width: 100%;
-}
+  }
+`;
+
+export const HorNavMenu = styled.ul`
+  display: flex;
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
+`;
+
+export const VerNavMenu = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  & > li {
+    margin: 20px 0;
+  }
+
+  @media only screen and (min-width: 992px) {
+    display: none;
+  }
+`;
+
+export const NavItem = styled.li`
+  margin: 0 20px;
+
+  & > a {
+    color: black;
+  }
+
+  &:hover& > a {
+    color: #858585;
+  }
+`;
+export const SocialMedia = styled.li`
+  margin: 0 12px;
+  &:hover& > a > i {
+    color: #858585;
+  }
+`;
+
+export const BurgerButton = styled.button`
+  border: 0;
+  background-color: white;
+  @media only screen and (min-width: 992px) {
+    display: none;
+  }
+
+  & > i {
+    color: black;
+    font-size: 30px;
+  }
 `;

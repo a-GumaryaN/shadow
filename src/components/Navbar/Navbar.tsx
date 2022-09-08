@@ -1,46 +1,74 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { logo } from "../../constants/images";
 import { navbar } from "../../constants/data";
 import {
-  Nav,
-  NavMenu,
-  NavItem,
-  SocialMedias,
-  SocialMedia,
+  Header,
   Logo,
+  NavItem,
+  SocialMedia,
+  Container,
+  VerNavMenu,
+  HorNavMenu,
+  BurgerButton,
 } from "./Navbar.styles";
 
 const Navbar: FC = ({}) => {
-  return (
-    <Nav>
-      <Logo to="/">
-        <img src={logo} alt="logo" />
-      </Logo>
+  const [verticalNav, showVertcalNav] = useState(false);
 
-      <NavMenu>
+  return (
+    <Header>
+      <Container>
+        <Logo to="/">
+          <img src={logo} alt="logo" />
+        </Logo>
+        <nav>
+          <HorNavMenu>
+            {navbar.map((item) => {
+              return (
+                <NavItem key={item}>
+                  <Link to={`/${item}`}>{item}</Link>
+                </NavItem>
+              );
+            })}
+
+            <SocialMedia>
+              <Link to="/">
+                <i className="fa fa-dribbble"></i>
+              </Link>
+            </SocialMedia>
+            <SocialMedia>
+              <Link to="/">
+                <i className="fa fa-behance"></i>
+              </Link>
+            </SocialMedia>
+            <SocialMedia>
+              <Link to="/">
+                <i className="fa fa-twitter"></i>
+              </Link>
+            </SocialMedia>
+          </HorNavMenu>
+        </nav>
+        <BurgerButton onClick={() => showVertcalNav(!verticalNav)}>
+          <i className="fa fa-bars"></i>
+        </BurgerButton>
+      </Container>
+
+      <VerNavMenu
+        style={{
+          display: verticalNav ? "flex" : "none",
+        }}
+      >
         {navbar.map((item) => {
           return (
-            <NavItem>
+            <li key={item}>
               <Link to={`/${item}`}>{item}</Link>
-            </NavItem>
+            </li>
           );
         })}
-
-      <SocialMedias>
-        <SocialMedia to="">
-          <i className="fa fa-dribbble"></i>
-        </SocialMedia>
-        <SocialMedia to="">
-          <i className="fa fa-behance"></i>
-        </SocialMedia>
-        <SocialMedia to="">
-          <i className="fa fa-twitter"></i>
-        </SocialMedia>
-      </SocialMedias>
-      </NavMenu>
-    </Nav>
+      </VerNavMenu>
+    </Header>
   );
 };
 
