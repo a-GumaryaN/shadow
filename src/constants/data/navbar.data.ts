@@ -1,6 +1,18 @@
 export default [
-    'home',
-    'about',
-    'services',
-    'contact us',
+    {
+        title: 'home',
+        link: ""
+    },
+    {
+        title: 'about',
+        link: "about"
+    },
+    {
+        title: 'services',
+        link: "services"
+    },
+    {
+        title: 'contact-us',
+        link: "contact-us"
+    },
 ];

@@ -1,11 +1,11 @@
 import { FC } from "react";
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 
 const Button: FC<{
   className?: string;
   children: any;
   onClick: Function;
-  styles?: any;
+  styles?: CSSProperties;
 }> = ({ className, children, onClick, styles }) => {
   return (
     <button style={styles} className={className} onClick={() => onClick()}>
@@ -19,14 +19,11 @@ export default styled(Button)`
   background-color: 0;
   padding: 10px 25px;
   border-radius: 50px;
+  cursor: pointer;
 
   & {
     color: black;
     background-color: white;
-  }
-  &:hover {
-    background-color: black;
-    color: white;
   }
 
   &.black {
@@ -34,7 +31,7 @@ export default styled(Button)`
     background-color: black;
   }
   &.black:hover {
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0);
     color: black;
   }
 `;

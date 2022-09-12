@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { logo } from "../../constants/images";
 import { navbar } from "../../constants/data";
+import { useInView } from "react-intersection-observer";
 import {
   Header,
   Logo,
@@ -17,8 +18,10 @@ import {
 const Navbar: FC = ({}) => {
   const [verticalNav, showVertcalNav] = useState(false);
 
+  const { inView, ref } = useInView({ threshold: 1 });
+
   return (
-    <Header>
+    <Header style={{ position: inView ? "fixed" : "sticky" }} ref={ref}>
       <Container>
         <Logo to="/">
           <img src={logo} alt="logo" />
@@ -27,8 +30,8 @@ const Navbar: FC = ({}) => {
           <HorNavMenu>
             {navbar.map((item) => {
               return (
-                <NavItem key={item}>
-                  <Link to={`/${item}`}>{item}</Link>
+                <NavItem key={item.title}>
+                  <Link to={`/${item.link}`}>{item.title}</Link>
                 </NavItem>
               );
             })}
@@ -62,8 +65,8 @@ const Navbar: FC = ({}) => {
       >
         {navbar.map((item) => {
           return (
-            <li key={item}>
-              <Link to={`/${item}`}>{item}</Link>
+            <li key={item.title}>
+              <Link to={`/${item.link}`}>{item.title}</Link>
             </li>
           );
         })}

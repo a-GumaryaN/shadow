@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 export const Header = styled.header`
   width: 100%;
-  position: sticky;
+  position: fixed;
   padding: 14px 120px;
   background-color: white;
+  z-index: 10;
   @media only screen and (max-width: 992px) {
     padding: 14px 30px;
   }

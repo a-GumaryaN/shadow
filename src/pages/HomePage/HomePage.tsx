@@ -1,20 +1,17 @@
 import React from "react";
-import Hiro from "../../components/Hiro/Hiro";
+import styled from "styled-components";
+import Hiro from "../../components/Hiro1/Hiro1";
 import Navbar from "../../components/Navbar/Navbar";
 import Paralax from "../../components/Paralax/Paralax";
-import HomePageStyled from "./HomePage.styles";
 import { banners } from "../../constants/images";
+import LatestWorks from "../../components/LatestWorks/LatestWorks";
+import ContactUs from "../../components/ContactUs/ContactUs";
 
-const HomePage = () => {
-  return (
-     <>
-      <Navbar />
-    <HomePageStyled>
-      <Paralax image={banners.banner1}/>
-      <Hiro/>
-    </HomePageStyled>
-    </>
-  );
-};
-
-export default HomePage;
+export default () => (
+  <>
+    <Paralax image={banners.banner1} />
+    <Hiro />
+    <LatestWorks />
+    <ContactUs/>
+  </>
+);

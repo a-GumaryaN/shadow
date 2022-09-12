@@ -1,17 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 600px;
-  margin-bottom: 60px;
+  height: 700px;
+  background-color: 0;
 `;
 
 export const Content = styled.div`
-  max-width: 70%;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -28,6 +27,7 @@ export const Title1 = styled.p`
 export const Title2 = styled.h3`
   font-size: 80px;
   font-weight: 800;
+  letter-spacing: 3px;
 
   & > div {
     color: #858585;

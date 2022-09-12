@@ -1,14 +1,13 @@
 import React from "react";
 import Button from "../Button/Button";
-import { Container, Content, Descrition, Title1, Title2 } from "./Hiro.styles";
+import { Container, Content, Descrition, Title1, Title2 } from "./Hiro1.styles";
 import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 
 const Hiro = () => {
   const navigate = useNavigate();
-
   const { inView, ref } = useInView({
-    threshold: 1,
+    threshold: 0.7,
   });
 
   return (
