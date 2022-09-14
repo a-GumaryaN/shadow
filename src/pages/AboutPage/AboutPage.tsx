@@ -14,6 +14,8 @@ const AboutPage = () => {
       <Descrition />
       <Divider/>
       <Skills/>
+      <Paralax image={banners.banner2}/>
+      
     </>
   );
 };
