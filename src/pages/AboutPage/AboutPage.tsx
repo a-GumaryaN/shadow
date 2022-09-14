@@ -4,6 +4,7 @@ import Divider from "../../components/Divider/Divider";
 import Hiro2 from "../../components/Hiro2/Hiro2";
 import Paralax from "../../components/Paralax/Paralax";
 import { banners } from "../../constants/images";
+import Skills from "../../components/Skills/Skills";
 
 const AboutPage = () => {
   return (
@@ -12,6 +13,7 @@ const AboutPage = () => {
       <Hiro2 pageName="about us" />
       <Descrition />
       <Divider/>
+      <Skills/>
     </>
   );
 };
