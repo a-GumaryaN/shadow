@@ -20,6 +20,8 @@ export const ProgressTitle = styled.div`
 export const ProgressPercent = styled.div`
   color: #777;
   letter-spacing: 1px;
+transition: all 0.7s ease;
+text-rendering: optimizeLegibility;
 `;
 
 export const ProgressBar = styled.div<{ align: "rtl" | "ltr" }>`
@@ -33,4 +35,5 @@ export const ProgressBar = styled.div<{ align: "rtl" | "ltr" }>`
 export const Progress = styled.div`
   height: 100%;
   background-color: black;
+  transition: all 0.7s ease;
 `;

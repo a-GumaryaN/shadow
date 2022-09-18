@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Title = styled.h3`
   text-transform: uppercase;
-  font-size: 100px;
+  font-size: 10vw;
   font-weight: 700;
 
   & > span {

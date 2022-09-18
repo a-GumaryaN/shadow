@@ -5,6 +5,7 @@ import Hiro2 from "../../components/Hiro2/Hiro2";
 import Paralax from "../../components/Paralax/Paralax";
 import { banners } from "../../constants/images";
 import Skills from "../../components/Skills/Skills";
+import OurTeams from "../../containers/OurTeams/OurTeams";
 
 const AboutPage = () => {
   return (
@@ -14,6 +15,8 @@ const AboutPage = () => {
       <Descrition />
       <Divider/>
       <Skills/>
+      <Divider/>
+      <OurTeams/>
       <Paralax image={banners.banner2}/>
       
     </>

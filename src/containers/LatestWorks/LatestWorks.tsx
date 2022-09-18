@@ -1,10 +1,10 @@
 import React, { FC } from "react";
-import Button from "../Button/Button";
+import Button from "../../components/Button/Button";
 import { Buttons, Container } from "./LatestWorks.styles";
-import Title from "../Title/Title";
-import Content from "../Content/Content";
+import Title from "../../components/Title/Title";
+import Content from "../../components/Content/Content";
 import { useNavigate } from "react-router-dom";
-import Gallery from "../Gallery/Gallery";
+import Gallery from "../../components/Gallery/Gallery";
 
 const LatestWorks: FC<{}> = () => {
   const navigate = useNavigate();

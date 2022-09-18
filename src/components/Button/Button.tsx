@@ -34,4 +34,8 @@ export default styled(Button)`
     background-color: rgba(0, 0, 0, 0);
     color: black;
   }
+
+  @media only screen and (max-width: 687px) {
+    width: 100%;
+  }
 `;

@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Button/Button";
-import Content from "../Content/Content";
+import Button from "../../components/Button/Button";
+import Content from "../../components/Content/Content";
 import { Container, Des, Title } from "./ContactUs.styles";
 
 const ContactUs = () => {

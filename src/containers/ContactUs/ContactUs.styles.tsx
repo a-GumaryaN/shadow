@@ -14,6 +14,7 @@ export const Title = styled.div`
   font-size: 30px;
   margin-bottom: 30px;
   text-align: center;
+  text-transform: uppercase;
 `;
 
 export const Des = styled.p`
