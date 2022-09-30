@@ -12,13 +12,14 @@ const ourTeams: {
 }[] = [
         {
             id: 1,
-            firstName: 'SASHA',
+            firstName: 'JOHN',
             lastName: 'DOEL',
-            part: '3D Animation',
+            part: 'Video Creation',
             image: ourTeamsImages.team_1,
             gmail: '',
             twitter: '',
             facebook: ''
+
         },
         {
             id: 2,
@@ -32,9 +33,9 @@ const ourTeams: {
         },
         {
             id: 3,
-            firstName: 'JOHN',
+            firstName: 'SASHA',
             lastName: 'DOEL',
-            part: 'Video Creation',
+            part: '3D Animation',
             image: ourTeamsImages.team_3,
             gmail: '',
             twitter: '',

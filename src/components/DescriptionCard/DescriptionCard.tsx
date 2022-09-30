@@ -1,7 +1,8 @@
 import React from "react";
+import styled from "styled-components";
 import { about } from "../../constants/images";
 import Button from "../Button/Button";
-import Title from "../Title/Title";
+import PureTitle from "../PureTitle/PureTitle";
 import {
   Section,
   Container,
@@ -15,16 +16,7 @@ const DescriptionCard = () => {
     <Section>
       <Container>
         <Description>
-          <Title
-            styles={{
-              marginBottom: "30px",
-              fontWeight: 700,
-              fontSize: "38px",
-              letterSpacing: "5px",
-            }}
-          >
-            about us
-          </Title>
+          <Title>about us</Title>
           <Subtitle>We are Creative, Innovative, and Positive.</Subtitle>
           <Paragraph>
             Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -58,5 +50,12 @@ const DescriptionCard = () => {
     </Section>
   );
 };
+
+const Title = styled(PureTitle)`
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 38px;
+  letter-spacing: 5px;
+`;
 
 export default DescriptionCard;

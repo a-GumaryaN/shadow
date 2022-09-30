@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   .wrapped{
     max-width: 1100px;
+    margin: auto;
   }
 
   .App{

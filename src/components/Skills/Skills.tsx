@@ -1,14 +1,15 @@
 import React from "react";
-import Title from "../Title/Title";
+import Title from "../PureTitle/PureTitle";
 import Proggress from "../Proggress/Proggress";
 import { skills } from "../../constants/data";
 
 import styled from "styled-components";
+import PureTitle from "../PureTitle/PureTitle";
 
 const Skills = () => {
   return (
     <SkillsContainer className="wrapped">
-      <Title>skills</Title>
+      <PureTitle>skills</PureTitle>
       <Container>
         <ProgressContainer>
           <h4>DESIGNER</h4>

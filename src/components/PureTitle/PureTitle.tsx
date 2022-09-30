@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled, { CSSProperties } from "styled-components";
-const Container = styled.h3`
+const PureTitle = styled.h3`
   text-transform: uppercase;
   font-weight: 700;
   font-size: 30px;
@@ -19,11 +19,4 @@ const Container = styled.h3`
   }
 `;
 
-const Title: FC<{ children: string; styles?: CSSProperties }> = ({
-  children,
-  styles,
-}) => {
-  return <Container style={styles}>{children}</Container>;
-};
-
-export default Title;
+export default PureTitle;

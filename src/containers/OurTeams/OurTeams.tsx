@@ -1,13 +1,13 @@
 import React from "react";
-import { Title } from "../ContactUs/ContactUs.styles";
 import ourTeams from "../../constants/data/ourTeam.data";
 import ImageCard from "../../components/ImageCard/ImageCard";
 import styled from "styled-components";
+import PureTitle from "../../components/PureTitle/PureTitle";
 
 const OurTeams = () => {
   return (
-    <Container>
-      <Title>meet the team</Title>
+    <Container className="wrapped">
+      <PureTitle>meet the team</PureTitle>
       <ImageBox>
         {ourTeams.map(
           ({
@@ -42,10 +42,10 @@ const OurTeams = () => {
 const Container = styled.div`
 background-color: white;
   width: 100%;
-  padding: 150px 0;
+  padding: 100px 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const ImageBox = styled.div`

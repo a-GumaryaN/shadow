@@ -1,10 +1,11 @@
 import React, { FC } from "react";
 import Button from "../../components/Button/Button";
 import { Buttons, Container } from "./LatestWorks.styles";
-import Title from "../../components/Title/Title";
+import PureTitle from "../../components/PureTitle/PureTitle";
 import Content from "../../components/Content/Content";
 import { useNavigate } from "react-router-dom";
 import Gallery from "../../components/Gallery/Gallery";
+import styled from "styled-components";
 
 const LatestWorks: FC<{}> = () => {
   const navigate = useNavigate();
@@ -12,9 +13,7 @@ const LatestWorks: FC<{}> = () => {
   return (
     <Container>
       <Content>
-        <Title styles={{ padding: "80px 0", marginBottom: "100px" }}>
-          latest work
-        </Title>
+        <Title>latest work</Title>
         <Buttons>
           <Button onClick={() => navigate("photo")}>Photo</Button>
           <Button className="black" onClick={() => navigate("graphic")}>
@@ -29,5 +28,10 @@ const LatestWorks: FC<{}> = () => {
     </Container>
   );
 };
+
+const Title = styled(PureTitle)`
+  padding: 80px 0;
+  margin-bottom: 100px;
+`;
 
 export default LatestWorks;
