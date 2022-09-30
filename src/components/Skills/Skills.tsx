@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const Skills = () => {
   return (
-    <SkillsContainer>
+    <SkillsContainer className="wrapped">
       <Title>skills</Title>
       <Container>
         <ProgressContainer>
@@ -33,11 +33,12 @@ const Skills = () => {
 const SkillsContainer = styled.section`
   width: 100%;
   background-color: white;
-  padding: 100px 100px;
+  margin: auto;
+  padding: 100px 10px;
   & > h3 {
     margin-bottom: 60px;
   }
-`;
+  `;
 
 const Container = styled.div`
   width: 100%;

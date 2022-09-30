@@ -21,6 +21,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Raleway' , sans-serif;
   }
 
+  .wrapped{
+    max-width: 1100px;
+  }
+
   .App{
     width: 100%;
   }
