@@ -24,6 +24,13 @@ const GlobalStyle = createGlobalStyle`
   .App{
     width: 100%;
   }
+
+  .paralax{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center ;
+    background-size: cover;
+  }
 `;
 
 export default GlobalStyle;

@@ -2,11 +2,11 @@ import React, { FC } from "react";
 import { Container, PageName, Title } from "./Hiro2.styles";
 import { useInView } from "react-intersection-observer";
 
-const Hiro2: FC<{ pageName: string }> = ({ pageName }) => {
+const Hiro2: FC<{ pageName: string , image:string }> = ({ pageName , image }) => {
   const { inView, ref } = useInView({ threshold: 0.8 });
 
   return (
-    <Container ref={ref}>
+    <Container className="paralax" image={image} ref={ref}>
       <Title>
         sha
         <span

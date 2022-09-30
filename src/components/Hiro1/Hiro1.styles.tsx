@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{image:string}>`
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: ${ ({image})=>(`url(${image})`) };
   height: 700px;
   background-color: 0;
 `;

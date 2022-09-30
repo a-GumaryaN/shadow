@@ -1,17 +1,17 @@
-import React from "react";
+import React, { FC } from "react";
 import Button from "../Button/Button";
 import { Container, Content, Descrition, Title1, Title2 } from "./Hiro1.styles";
 import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 
-const Hiro = () => {
+const Hiro :FC<{image:string}>= ({image}) => {
   const navigate = useNavigate();
   const { inView, ref } = useInView({
     threshold: 0.7,
   });
 
   return (
-    <Container ref={ref}>
+    <Container image={image} className="paralax" ref={ref}>
       <Content>
         <Title1>HELLO!</Title1>
         <Title2>
