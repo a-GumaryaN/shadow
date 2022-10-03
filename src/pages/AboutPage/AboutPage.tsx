@@ -5,6 +5,7 @@ import Hiro2 from "../../components/Hiro2/Hiro2";
 import { banners } from "../../constants/images";
 import Skills from "../../components/Skills/Skills";
 import OurTeams from "../../containers/OurTeams/OurTeams";
+import TestMonials from "../../containers/TestMonials/TestMonials";
 
 const AboutPage = () => {
   return (
@@ -15,6 +16,7 @@ const AboutPage = () => {
       <Skills/>
       <Divider/>
       <OurTeams/>
+      <TestMonials/>
       
     </>
   );
