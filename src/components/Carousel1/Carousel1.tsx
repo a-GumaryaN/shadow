@@ -37,7 +37,14 @@ const Carousel1: FC<{
       </SlideConainer>
       <Dots>
         {contents.map(({ id }) => {
-          return <Dot isActive={id === slideNumber}></Dot>;
+          return (
+            <Dot
+              onClick={() => {
+                setSlideNumber(id);
+              }}
+              isActive={id === slideNumber}
+            ></Dot>
+          );
         })}
       </Dots>
     </Container>

@@ -19,6 +19,10 @@ const TestMonials = () => {
 const Container = styled.section<{ image: string }>`
   background-image: ${({ image }) => `url(${image})`};
   padding: 80px 100px;
+
+  @media only screen and (max-width:567px) {
+    display:none;
+  }
 `;
 
 const Wrapper = styled.div`

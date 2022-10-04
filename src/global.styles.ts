@@ -35,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
     background-attachment: fixed;
     background-position:center ;
     background-size: cover;
+    overflow-x: hidden;
   }
 `;
 
