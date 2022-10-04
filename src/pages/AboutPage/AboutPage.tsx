@@ -6,6 +6,8 @@ import { banners } from "../../constants/images";
 import Skills from "../../components/Skills/Skills";
 import OurTeams from "../../containers/OurTeams/OurTeams";
 import TestMonials from "../../containers/TestMonials/TestMonials";
+import OurClients from "../../containers/OurClients/OurClients";
+import OurServices from "../../containers/OurServices/OurServices";
 
 const AboutPage = () => {
   return (
@@ -17,6 +19,9 @@ const AboutPage = () => {
       <Divider/>
       <OurTeams/>
       <TestMonials/>
+      <OurClients/>
+      <Divider/>
+      <OurServices/>
       
     </>
   );

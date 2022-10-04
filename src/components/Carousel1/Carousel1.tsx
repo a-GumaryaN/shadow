@@ -16,6 +16,7 @@ const Carousel1: FC<{
       slideNumber < contents.length && setSlideNumber(slideNumber + 1);
       slideNumber >= contents.length && setSlideNumber(1);
     }, 5000);
+    return () => clearTimeout(sliderTimer);
   }, [slideNumber]);
 
   return (
@@ -54,7 +55,7 @@ const SlideConainer = styled.div<{
 }>`
   width: ${({ contentsNumbers }) => contentsNumbers * 100 + "%"};
   position: relative;
-  right: ${({ slideNumber }) => (slideNumber-1) * 100 + "%"};
+  right: ${({ slideNumber }) => (slideNumber - 1) * 100 + "%"};
   display: flex;
   overflow: hidden;
   margin-bottom: 40px;

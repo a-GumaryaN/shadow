@@ -5,5 +5,5 @@ export default styled.div`
   width: 100%;
   height: 1px;
   margin:auto;
-  background-color: #858585;
+  background-color: #b1b1b1;
 `;
