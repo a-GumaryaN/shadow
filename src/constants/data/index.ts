@@ -4,6 +4,7 @@ import skills from './skills.data';
 import testmonials from "./testmonials.data";
 import ourServices from "./ourServices.data";
 import worksCounter from "./worksCounter.data";
+import ourProcess from "./ourProcess.data";
 
 export {
     navbar,
@@ -11,5 +12,6 @@ export {
     skills,
     testmonials,
     ourServices,
-    worksCounter
+    worksCounter,
+    ourProcess
 }

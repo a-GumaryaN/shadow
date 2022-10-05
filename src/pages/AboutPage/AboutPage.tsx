@@ -9,6 +9,7 @@ import TestMonials from "../../containers/TestMonials/TestMonials";
 import OurClients from "../../containers/OurClients/OurClients";
 import OurServices from "../../containers/OurServices/OurServices";
 import WorksCounter from "../../components/WorksCounter/WorksCounter";
+import OurProcess from "../../containers/OurProcess/OurProcess";
 
 const AboutPage = () => {
   return (
@@ -25,6 +26,7 @@ const AboutPage = () => {
       <Divider/>
       <OurServices/>
       <WorksCounter/>
+      <OurProcess/>
       
     </>
   );
