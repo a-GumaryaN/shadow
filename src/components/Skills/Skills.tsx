@@ -14,7 +14,7 @@ const Skills = () => {
         <ProgressContainer>
           <h4>DESIGNER</h4>
           {skills.designer.map(({ title, percentage }) => {
-            return <Proggress title={title} percentage={percentage} />;
+            return <Proggress key={title} title={title} percentage={percentage} />;
           })}
         </ProgressContainer>
 
@@ -22,7 +22,7 @@ const Skills = () => {
           <h4>DEVELOPER</h4>
           {skills.designer.map(({ title, percentage }) => {
             return (
-              <Proggress align="ltr" title={title} percentage={percentage} />
+              <Proggress key={title} align="ltr" title={title} percentage={percentage} />
             );
           })}
         </ProgressContainer>

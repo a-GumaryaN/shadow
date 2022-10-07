@@ -25,9 +25,9 @@ const Carousel1: FC<{
         contentsNumbers={contents.length}
         slideNumber={slideNumber}
       >
-        {contents.map(({ description, title, subtitle }) => {
+        {contents.map(({id, description, title, subtitle }) => {
           return (
-            <Slide>
+            <Slide key={id}>
               <Description>{description}</Description>
               <Title>{title}</Title>
               <Subtitle>{subtitle}</Subtitle>
@@ -39,6 +39,7 @@ const Carousel1: FC<{
         {contents.map(({ id }) => {
           return (
             <Dot
+            key={id}
               onClick={() => {
                 setSlideNumber(id);
               }}

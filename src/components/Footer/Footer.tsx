@@ -12,24 +12,19 @@ const Footer = () => {
         <FooterLogo src={logo.logoFooter} />
         <Title>Creative Digital Media</Title>
 
-        
         <SocialMedias>
-          {footer.socialMedias.map((item) => {
+          {footer.socialMedias.map(({ icon, id, link }) => {
             return (
-              <li>
-                <Link to={item.link}>
-                  <i className={item.icon}></i>
+              <li key={id}>
+                <Link to={link}>
+                  <i className={icon}></i>
                 </Link>
               </li>
             );
           })}
         </SocialMedias>
 
-
-        
-        <CopyRight>
-          Copy right
-        </CopyRight>
+        <CopyRight>Copy right</CopyRight>
       </Content>
     </Container>
   );

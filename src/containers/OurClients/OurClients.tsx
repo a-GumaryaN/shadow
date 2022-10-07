@@ -10,7 +10,7 @@ const OurClients = () => {
       <ListContainer className="wrapped">
         {ourClients.map((item) => {
           return (
-            <li>
+            <li key={item}>
               <img src={item} alt="" />
             </li>
           );
