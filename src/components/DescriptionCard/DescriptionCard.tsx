@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { about } from "../../constants/images";
-import Button from "../Button/Button";
+import PureBotton from "../PureBotton/PureBotton";
 import PureTitle from "../PureTitle/PureTitle";
 import {
   Section,
@@ -30,19 +30,9 @@ const DescriptionCard = () => {
             cupidatat non proident.{" "}
           </Paragraph>
 
-          <Button
-            styles={{
-              fontWeight: 600,
-              fontSize: "14px",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              padding: "10px 30px",
-            }}
-            className="black"
-            onClick={() => {}}
-          >
+          <Botton className="black" onClick={() => {}}>
             hire us now!
-          </Button>
+          </Botton>
         </Description>
 
         <img src={about} alt="about us" />
@@ -56,6 +46,14 @@ const Title = styled(PureTitle)`
   font-weight: 700;
   font-size: 38px;
   letter-spacing: 5px;
+`;
+
+const Botton = styled(PureBotton)`
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  texttransform: uppercase;
+  padding: 10px 30px;
 `;
 
 export default DescriptionCard;

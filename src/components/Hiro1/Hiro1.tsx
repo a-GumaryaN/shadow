@@ -1,10 +1,11 @@
 import React, { FC } from "react";
-import Button from "../Button/Button";
+import PureButton from "../PureBotton/PureBotton";
 import { Container, Content, Descrition, Title1, Title2 } from "./Hiro1.styles";
 import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+import styled from "styled-components";
 
-const Hiro :FC<{image:string}>= ({image}) => {
+const Hiro: FC<{ image: string }> = ({ image }) => {
   const navigate = useNavigate();
   const { inView, ref } = useInView({
     threshold: 0.7,
@@ -28,7 +29,6 @@ const Hiro :FC<{image:string}>= ({image}) => {
         <Descrition>Creative Digital Media</Descrition>
       </Content>
       <Button
-        styles={{ fontWeight: "600", fontSize: "14px" }}
         onClick={() => {
           navigate("#", { replace: true });
         }}
@@ -39,5 +39,10 @@ const Hiro :FC<{image:string}>= ({image}) => {
     </Container>
   );
 };
+
+const Button = styled(PureButton)`
+  font-weight: 600;
+  font-size: 14px;
+`;
 
 export default Hiro;

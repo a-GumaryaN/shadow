@@ -1,20 +1,7 @@
 import { FC } from "react";
-import styled, { CSSProperties } from "styled-components";
+import styled from "styled-components";
 
-const Button: FC<{
-  className?: string;
-  children: any;
-  onClick: Function;
-  styles?: CSSProperties;
-}> = ({ className, children, onClick, styles }) => {
-  return (
-    <button style={styles} className={className} onClick={() => onClick()}>
-      {children}
-    </button>
-  );
-};
-
-export default styled(Button)`
+export default styled.button`
   border: 1px solid black;
   background-color: 0;
   padding: 10px 25px;

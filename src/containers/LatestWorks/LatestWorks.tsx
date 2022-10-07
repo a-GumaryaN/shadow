@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Button from "../../components/Button/Button";
+import PureBotton from "../../components/PureBotton/PureBotton";
 import { Buttons, Container } from "./LatestWorks.styles";
 import PureTitle from "../../components/PureTitle/PureTitle";
 import Content from "../../components/Content/Content";
@@ -15,13 +15,13 @@ const LatestWorks: FC<{}> = () => {
       <Content>
         <Title>latest work</Title>
         <Buttons>
-          <Button onClick={() => navigate("photo")}>Photo</Button>
-          <Button className="black" onClick={() => navigate("graphic")}>
+          <PureBotton onClick={() => navigate("photo")}>Photo</PureBotton>
+          <PureBotton className="black" onClick={() => navigate("graphic")}>
             Graphic
-          </Button>
-          <Button className="black" onClick={() => navigate("web")}>
+          </PureBotton>
+          <PureBotton className="black" onClick={() => navigate("web")}>
             Web
-          </Button>
+          </PureBotton>
         </Buttons>
         <Gallery />
       </Content>
