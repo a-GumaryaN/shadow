@@ -3,6 +3,7 @@ import ourTeams from "../../constants/data/ourTeam.data";
 import ImageCard from "../../components/ImageCard/ImageCard";
 import styled from "styled-components";
 import PureTitle from "../../components/PureTitle/PureTitle";
+import { Container, ImageBox } from "./OurTeams.styles";
 
 const OurTeams = () => {
   return (
@@ -39,22 +40,6 @@ const OurTeams = () => {
   );
 };
 
-const Container = styled.div`
-background-color: white;
-  width: 100%;
-  padding: 100px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
 
-const ImageBox = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  @media only screen and (max-width: 687px) {
-    flex-direction: column;
-  }
-`;
 
 export default OurTeams;

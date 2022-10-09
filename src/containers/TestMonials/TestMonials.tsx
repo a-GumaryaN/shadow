@@ -4,6 +4,7 @@ import Carousel1 from "../../components/Carousel1/Carousel1";
 import PureTitle from "../../components/PureTitle/PureTitle";
 import { testmonials } from "../../constants/data";
 import { banners } from "../../constants/images";
+import { Container, Title, Wrapper } from "./TestMinials.styles";
 
 const TestMonials = () => {
   return (
@@ -16,30 +17,5 @@ const TestMonials = () => {
   );
 };
 
-const Container = styled.section<{ image: string }>`
-  background-image: ${({ image }) => `url(${image})`};
-  padding: 80px 100px;
-
-  @media only screen and (max-width:567px) {
-    display:none;
-  }
-`;
-
-const Wrapper = styled.div`
-display: flex;
-&:before{
-    content: "\f10e";
-    color: white;
-    font-size: 30px;
-    font-family: FontAwesome;
-    margin-right: 15px;
-}
-`;
-
-const Title = styled(PureTitle)`
-  color: white;
-  font-size: 35px;
-  margin-bottom: 30px;
-`;
 
 export default TestMonials;

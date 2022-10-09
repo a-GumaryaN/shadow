@@ -9,6 +9,8 @@ import {
   Description,
   Paragraph,
   Subtitle,
+  Title,
+  Botton,
 } from "./DescriptionCard.styles";
 
 const DescriptionCard = () => {
@@ -41,19 +43,6 @@ const DescriptionCard = () => {
   );
 };
 
-const Title = styled(PureTitle)`
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 38px;
-  letter-spacing: 5px;
-`;
 
-const Botton = styled(PureBotton)`
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 2px;
-  texttransform: uppercase;
-  padding: 10px 30px;
-`;
 
 export default DescriptionCard;

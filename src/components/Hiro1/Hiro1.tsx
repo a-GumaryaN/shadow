@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import PureButton from "../PureBotton/PureBotton";
-import { Container, Content, Descrition, Title1, Title2 } from "./Hiro1.styles";
+import { Button, Container, Content, Descrition, Title1, Title2 } from "./Hiro1.styles";
 import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
@@ -39,10 +39,5 @@ const Hiro: FC<{ image: string }> = ({ image }) => {
     </Container>
   );
 };
-
-const Button = styled(PureButton)`
-  font-weight: 600;
-  font-size: 14px;
-`;
 
 export default Hiro;

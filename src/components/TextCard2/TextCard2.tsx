@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
-import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
+import { Container, Description, Icon, Number, Wrapper } from "./TextCard2.styles";
 
 const TextCard2: FC<{
   icon: string;
@@ -28,32 +28,5 @@ const TextCard2: FC<{
     </Container>
   );
 };
-
-const Container = styled.div`
-  display: flex;
-`;
-
-const Icon = styled.i`
-  color: white;
-  font-size: 27px;
-  margin-right: 20px;
-  margin-top: 6px;
-`;
-
-const Wrapper = styled.div``;
-
-const Number = styled.h4`
-  color: white;
-  font-size: 50px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-`;
-
-const Description = styled.p`
-  color: white;
-  max-width: 30px;
-  letter-spacing: 2px;
-`;
 
 export default TextCard2;

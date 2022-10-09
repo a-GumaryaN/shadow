@@ -1,81 +1,105 @@
 import React from "react";
-import styled from "styled-components";
-import PureTitle from "../PureTitle/PureTitle";
-import { Formik, Form, useField, useFormik } from "formik";
+import { useFormik } from "formik";
 import * as Yup from "yup";
+import {
+  Botton,
+  Error,
+  FormContainer,
+  InutBox,
+  MessageBox,
+  PureInput,
+  Title,
+} from "./OrderForm.styles";
 
 const OrderForm = () => {
   const formik = useFormik({
     initialValues: {
       fullName: "",
 
-      email: "",
+      address: "",
+
+      subject: "",
 
       message: "",
     },
 
     validationSchema: Yup.object({
-      firstName: Yup.string()
+      fullName: Yup.string()
 
         .max(45, "fullname must be 45 characters or less")
+        .required("Please fill out this field."),
 
-        .required("Required"),
+      address: Yup.string().required("Please fill out this field."),
 
-      email: Yup.string().email("Invalid email address").required("Required"),
+      subject: Yup.string().required("Please fill out this field."),
 
-      message: Yup.string().max(
-        400,
-        "message shold be 400 45 characters or less"
-      ),
+      message: Yup.string().max(400),
     }),
 
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      alert(values);
     },
   });
 
   return (
     <div>
       <Title>start a project</Title>
-      <form>
+      <FormContainer onSubmit={formik.handleSubmit}>
         <InutBox>
-          <PureInput placeholder="Full Name..." />
-          <p></p>
+          <PureInput
+            name="fullName"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.fullName}
+            type="text"
+            id="fullName"
+            placeholder="Full Name..."
+          />
+          {formik.errors.fullName && <Error>{formik.errors.fullName}</Error>}
         </InutBox>
+
         <InutBox>
-          <PureInput placeholder="Enter Address..." />
-          <p></p>
+          <PureInput
+            name="address"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.address}
+            type="text"
+            id="address"
+            placeholder="Enter Address..."
+          />
+          {formik.errors.address && <Error>{formik.errors.address}</Error>}
         </InutBox>
 
         <InutBox>
-          <PureInput placeholder="Subject..." />
-          <p></p>
+          <PureInput
+            name="subject"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.subject}
+            type="text"
+            id="subject"
+            placeholder="Subject..."
+          />
+          {formik.errors.subject && <Error>{formik.errors.subject}</Error>}
         </InutBox>
-        
-        <textarea placeholder="Write message" name="" id="" ></textarea>
 
+        <MessageBox
+          cols={30}
+          rows={7}
+          placeholder="Write message..."
+          name="message"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.message}
+          id="message"
+        ></MessageBox>
+        {formik.errors.message && <Error>{formik.errors.message}</Error>}
 
-
-      </form>
+        <Botton>send message</Botton>
+      </FormContainer>
     </div>
   );
 };
-
-const Title = styled(PureTitle)`
-  margin-bottom: 30px;
-`;
-
-const PureInput = styled.input`
-  border-color: #eee;
-  /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); */
-
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.075); 
-  width: 100%;
-  padding: 10px;
-`;
-
-const InutBox = styled.div`
-  width: 100%;
-`;
 
 export default OrderForm;

@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import PureTitle from "../../components/PureTitle/PureTitle";
 import TextCard from "../../components/TextCard/TextCard";
 import { ourServices } from "../../constants/data";
+import { CardContainer, Container, Title, Wrapper } from "./OurServices.styles";
 
 const OurServices = () => {
   return (
@@ -25,36 +24,5 @@ const OurServices = () => {
     </Container>
   );
 };
-
-const Container = styled.section`
-  padding: 100px 20px;
-`;
-
-const Wrapper = styled.div`
-  max-width: 1000px;
-  margin: auto;
-`;
-
-const Title = styled(PureTitle)`
-  margin-bottom: 60px;
-`;
-
-const CardContainer = styled.div`
-  display: grid;
-
-  gap: 30px;
-
-  align-items: center;
-
-  grid-template-columns: auto;
-
-  @media only screen and (min-width: 687px) {
-    grid-template-columns: auto auto;
-  }
-
-  @media only screen and (min-width: 992px) {
-    grid-template-columns: auto auto auto;
-  }
-`;
 
 export default OurServices;

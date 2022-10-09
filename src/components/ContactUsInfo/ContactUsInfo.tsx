@@ -1,6 +1,15 @@
 import React from "react";
-import styled from "styled-components";
-import PureTitle from "../PureTitle/PureTitle";
+import {
+  ValueItem,
+  Container,
+  Description,
+  Icon,
+  IconItem,
+  Key,
+  ListContainer,
+  Title,
+  TitleItem,
+} from "./ContactUsInfo.styles";
 
 const data: { id: number; icon: string; key: string; value: string }[] = [
   {
@@ -67,56 +76,5 @@ const ContactUsInfo = () => {
     </Container>
   );
 };
-
-const Container = styled.div`
-  @media only screen and (min-width: 687px) {
-    max-width: 400px;
-  }
-`;
-
-const Description = styled.p`
-  color: #666666;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 25px;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
-`;
-
-const Icon = styled.i`
-  color: #666666;
-  margin-right: 10px;
-`;
-
-const Key = styled.p`
-  color: #666666;
-  margin-right: 30px;
-`;
-
-const Item = styled.li`
-  margin-bottom: 10px;
-`;
-
-const IconItem = styled(Item)`
-  margin-bottom: 10px;
-`;
-
-const TitleItem = styled(Item)`
-  margin-bottom: 10px;
-  font-weight: 600;
-`;
-
-const ValueItem = styled(Item)`
-  margin-bottom: 10px;
-  font-weight: 200;
-`;
-
-const ListContainer = styled.div`
-  display: flex;
-`;
-
-const Title = styled(PureTitle)`
-  margin-bottom: 30px;
-`;
 
 export default ContactUsInfo;

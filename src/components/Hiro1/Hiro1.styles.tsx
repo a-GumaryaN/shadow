@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PureBotton from "../PureBotton/PureBotton";
 
 export const Container = styled.div<{image:string}>`
   overflow: hidden;
@@ -46,4 +47,10 @@ export const Descrition = styled.h3`
     color: #858585;
     display: inline;
   }
+`;
+
+
+export const Button = styled(PureBotton)`
+  font-weight: 600;
+  font-size: 14px;
 `;
